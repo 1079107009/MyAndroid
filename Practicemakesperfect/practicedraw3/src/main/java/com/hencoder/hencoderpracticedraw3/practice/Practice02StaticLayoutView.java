@@ -36,7 +36,7 @@ public class Practice02StaticLayoutView extends View {
 
         // 使用 StaticLayout 代替 Canvas.drawText() 来绘制文字，
         // 以绘制出带有换行的文字
-        canvas.drawText(text, 50, 100, textPaint);
+//        canvas.drawText(text, 50, 100, textPaint);
         //width 是文字区域的宽度，文字到达这个宽度后就会自动换行；
         //align 是文字的对齐方向；
         //spacingmult 是行间距的倍数，通常情况下填 1 就好；
