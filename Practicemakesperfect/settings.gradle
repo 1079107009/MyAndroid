@@ -1,1 +1,1 @@
-include ':app', ':practicedraw2', ':practicedraw3', ':practicedraw4', ':practicedraw5'
+include ':app', ':practicedraw2', ':practicedraw3', ':practicedraw4', ':practicedraw5', ':practicedraw7'
