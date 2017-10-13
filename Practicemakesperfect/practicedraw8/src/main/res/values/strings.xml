@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">practicedraw8</string>
+    <string name="like">点赞</string>
+    <string name="tape">卷尺</string>
+    <string name="sport">运动</string>
+    <string name="flipboard">红板报</string>
+</resources>
