@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Practicemakesperfect.iml" filepath="$PROJECT_DIR$/Practicemakesperfect.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itemdecoration/itemdecoration.iml" filepath="$PROJECT_DIR$/itemdecoration/itemdecoration.iml" />
       <module fileurl="file://$PROJECT_DIR$/practicedraw2/practicedraw2.iml" filepath="$PROJECT_DIR$/practicedraw2/practicedraw2.iml" />
       <module fileurl="file://$PROJECT_DIR$/practicedraw3/practicedraw3.iml" filepath="$PROJECT_DIR$/practicedraw3/practicedraw3.iml" />
       <module fileurl="file://$PROJECT_DIR$/practicedraw4/practicedraw4.iml" filepath="$PROJECT_DIR$/practicedraw4/practicedraw4.iml" />
