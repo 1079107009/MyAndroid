@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 
@@ -119,12 +120,37 @@ public class TitleItemDecoration extends RecyclerView.ItemDecoration {
     @Override
     public void onDrawOver(Canvas c, RecyclerView parent, RecyclerView.State state) {
         int position = ((LinearLayoutManager) parent.getLayoutManager()).findFirstVisibleItemPosition();
-        int left = parent.findViewHolderForLayoutPosition(position).itemView.getPaddingLeft();
+        View child = parent.findViewHolderForLayoutPosition(position).itemView;
+        int left = child.getPaddingLeft();
+        //定义一个flag，Canvas是否位移过的标志
+        boolean flag = false;
         String tag = mCityBeans.get(position).getTag();
+        //当getTop开始变负，它的绝对值，是第一个可见的Item移出屏幕的距离，
+        Log.d("lp", "top=" + child.getTop() + ",height=" + child.getHeight());
+        //如果说最后一个分组数据过多，滑到第一个可见的位置，会造成下标越界
+        if ((position + 1) < mCityBeans.size()) {
+            //当头部发生变化时再对canvas做处理，不加这个判断position发生变化时都会对canvas做处理
+            if (tag != null && !tag.equals(mCityBeans.get(position + 1).getTag())) {
+                //当child刚好不可见时开始将canvas平移
+                if (child.getHeight() + child.getTop() <= mTitleHeight) {
+                    //每次绘制前 保存当前Canvas状态
+                    c.save();
+                    flag = true;
+                    //平移效果
+                    c.translate(0, child.getHeight() + child.getTop() - mTitleHeight);
+                    //折叠效果
+//                    c.clipRect(0,0,parent.getWidth(),
+//                            child.getHeight() + child.getTop());
+                }
+            }
+        }
         mPaint.setColor(COLOR_TITLE_BG);
         c.drawRect(0, 0, parent.getWidth(), mTitleHeight, mPaint);
         mPaint.setColor(COLOR_TITLE_FONT);
         mPaint.getTextBounds(tag, 0, tag.length(), mBounds);
         c.drawText(tag, left, mTitleHeight / 2 + mBounds.height() / 2, mPaint);
+        if (flag) {
+            c.restore();
+        }
     }
 }
