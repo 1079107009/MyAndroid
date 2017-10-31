@@ -1,4 +1,4 @@
-package com.lp.itemdecoration;
+package com.lp.itemdecoration.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,6 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.lp.itemdecoration.R;
+import com.lp.itemdecoration.bean.CityBean;
 
 import java.util.List;
 
@@ -23,6 +26,10 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.ViewHolder> {
     public CityAdapter(Context context, List<CityBean> datas) {
         mCityBeans = datas;
         mInflater = LayoutInflater.from(context);
+    }
+
+    public void setDatas(List<CityBean> datas) {
+        this.mCityBeans = datas;
     }
 
     @Override

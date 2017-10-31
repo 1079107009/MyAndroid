@@ -1,4 +1,4 @@
-package com.lp.itemdecoration;
+package com.lp.itemdecoration.itemdecoration;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -9,6 +9,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.View;
+
+import com.lp.itemdecoration.bean.CityBean;
 
 import java.util.List;
 
@@ -46,6 +48,10 @@ public class TitleItemDecoration extends RecyclerView.ItemDecoration {
         mTitleFontSize = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
                 16, context.getResources().getDisplayMetrics());
         mPaint.setTextSize(mTitleFontSize);
+    }
+
+    public void setDatas(List<CityBean> datas) {
+        this.mCityBeans = datas;
     }
 
     @Override

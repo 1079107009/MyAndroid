@@ -1,4 +1,4 @@
-package com.lp.itemdecoration;
+package com.lp.itemdecoration.bean;
 
 /**
  * @author LiPin
@@ -6,7 +6,7 @@ package com.lp.itemdecoration;
  * 描述：
  */
 
-public class CityBean {
+public class CityBean implements Cloneable {
     /**
      * 所属的分类（城市的汉语拼音首字母）
      */
@@ -32,5 +32,10 @@ public class CityBean {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    @Override
+    public CityBean clone() throws CloneNotSupportedException {
+        return (CityBean) super.clone();
     }
 }

@@ -1,4 +1,4 @@
-package com.lp.itemdecoration;
+package com.lp.itemdecoration.itemdecoration;
 
 import android.content.Context;
 import android.content.res.TypedArray;
