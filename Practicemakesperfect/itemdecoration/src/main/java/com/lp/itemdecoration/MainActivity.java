@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onIndexPressed(int index, String text) {
                 mPressedShowTextView.setVisibility(View.VISIBLE);
-                mPressedShowTextView.setText(text);
                 int position = getPosByTag(text);
                 if (position != -1) {
+                    mPressedShowTextView.setText(text);
                     mLayoutManager.scrollToPositionWithOffset(position, 0);
                 }
             }
