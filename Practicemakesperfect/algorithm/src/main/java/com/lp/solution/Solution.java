@@ -1,7 +1,9 @@
 
 package com.lp.solution;
 
+import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Set;
 
 public class Solution {
 
@@ -132,8 +134,10 @@ public class Solution {
      * The sister has two different kinds of candies, the brother has only one kind of candies.
      */
     public int distributeCandies(int[] candies) {
-        int result = 0;
-
-        return result;
+        Set<Integer> kinds = new HashSet<>();
+        for (int candy : candies) {
+            kinds.add(candy);
+        }
+        return kinds.size() >= candies.length / 2 ? candies.length / 2 : kinds.size();
     }
 }
