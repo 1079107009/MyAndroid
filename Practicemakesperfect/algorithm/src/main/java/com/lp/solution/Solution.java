@@ -1,8 +1,10 @@
 
 package com.lp.solution;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 public class Solution {
@@ -139,5 +141,103 @@ public class Solution {
             kinds.add(candy);
         }
         return kinds.size() >= candies.length / 2 ? candies.length / 2 : kinds.size();
+    }
+
+    /**
+     * 728. Self Dividing Numbers
+     */
+    public List<Integer> selfDividingNumbers(int left, int right) {
+        List<Integer> list = new ArrayList<>();
+        for (int i = left; i <= right; i++) {
+            if (isSelfDividingNumber(i)) {
+                list.add(i);
+            }
+        }
+        return list;
+    }
+
+    private boolean isSelfDividingNumber(int number) {
+        int temp = number;
+        while (number > 0) {
+            int i = number % 10;
+            //不能包含数字0
+            if (i == 0) {
+                return false;
+            }
+            if (temp % i != 0) {
+                return false;
+            }
+            number /= 10;
+        }
+        return true;
+    }
+
+    /**
+     * 412. Fizz Buzz
+     *
+     * @param n 输入一个数
+     * @return
+     */
+    public List<String> fizzBuzz1(int n) {
+        List<String> list = new ArrayList<>(n);
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                list.add("FizzBuzz");
+                continue;
+            }
+            if (i % 3 == 0) {
+                list.add("Fizz");
+                continue;
+            }
+            if (i % 5 == 0) {
+                list.add("Buzz");
+                continue;
+            }
+            list.add(String.valueOf(i));
+        }
+        return list;
+    }
+
+    public List<String> fizzBuzz2(int n) {
+        List<String> ret = new ArrayList<>(n);
+        for (int i = 1, fizz = 0, buzz = 0; i <= n; i++) {
+            fizz++;
+            buzz++;
+            if (fizz == 3 && buzz == 5) {
+                ret.add("FizzBuzz");
+                fizz = 0;
+                buzz = 0;
+            } else if (fizz == 3) {
+                ret.add("Fizz");
+                fizz = 0;
+            } else if (buzz == 5) {
+                ret.add("Buzz");
+                buzz = 0;
+            } else {
+                ret.add(String.valueOf(i));
+            }
+        }
+        return ret;
+    }
+
+    /**
+     * 566. Reshape the Matrix
+     *
+     * @param nums
+     * @param r
+     * @param c
+     * @return
+     */
+    public int[][] matrixReshape(int[][] nums, int r, int c) {
+        int n = nums.length;
+        int m = nums[0].length;
+        if (n * m != r * c) {
+            return nums;
+        }
+        int[][] res = new int[r][c];
+        for (int i = 0; i < r * c; i++) {
+            res[i / c][i % c] = nums[i / m][i % m];
+        }
+        return res;
     }
 }
