@@ -1,0 +1,33 @@
+/*
+ *  ------------------------------------------------------------------
+ *  Copyright © 2017. Hangzhou DtDream Technology Co.,Lt d. All rights reserved.
+ *  ------------------------------------------------------------------
+ *  Product: 产品化App
+ *  Module Name: dynamic-proxy-hook
+ *  Date Created: 17-12-22 上午10:59
+ *  Description:
+ *  ------------------------------------------------------------------
+ *  Modification History
+ *  17-12-22 上午10:58           ExampleUnitTest.java            lipin
+ *  ------------------------------------------------------------------
+ *
+ *  ------------------------------------------------------------------
+ */
+
+package com.lp.dynamic_proxy_hook;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+/**
+ * Example local unit test, which will execute on the development machine (host).
+ *
+ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+ */
+public class ExampleUnitTest {
+    @Test
+    public void addition_isCorrect() throws Exception {
+        assertEquals(4, 2 + 2);
+    }
+}
