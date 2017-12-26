@@ -1,1 +1,1 @@
-include ':app', ':practicedraw2', ':practicedraw3', ':practicedraw4', ':practicedraw5', ':practicedraw7', ':practicedraw8', ':itemdecoration', ':algorithm', ':dynamic-proxy-hook'
+include ':app', ':practicedraw2', ':practicedraw3', ':practicedraw4', ':practicedraw5', ':practicedraw7', ':practicedraw8', ':itemdecoration', ':algorithm', ':dynamic-proxy-hook', ':binder-hook', ':ipc'

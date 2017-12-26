@@ -175,7 +175,7 @@ public class Solution {
     /**
      * 412. Fizz Buzz
      *
-     * @param n 输入一个数
+     * @param n
      * @return
      */
     public List<String> fizzBuzz1(int n) {
