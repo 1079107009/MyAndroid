@@ -10,6 +10,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try {
+            BinderHookHelper.hookClipboardService();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         EditText editText = new EditText(this);
         setContentView(editText);
     }

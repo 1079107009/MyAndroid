@@ -3,11 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Practicemakesperfect.iml" filepath="$PROJECT_DIR$/Practicemakesperfect.iml" />
+      <module fileurl="file://D:\MyAndroid\MyAndroid\Practicemakesperfect\ipc\aidl.iml" filepath="D:\MyAndroid\MyAndroid\Practicemakesperfect\ipc\aidl.iml" />
       <module fileurl="file://$PROJECT_DIR$/algorithm/algorithm.iml" filepath="$PROJECT_DIR$/algorithm/algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/binder-hook/binder-hook.iml" filepath="$PROJECT_DIR$/binder-hook/binder-hook.iml" />
       <module fileurl="file://$PROJECT_DIR$/dynamic-proxy-hook/dynamic-proxy-hook.iml" filepath="$PROJECT_DIR$/dynamic-proxy-hook/dynamic-proxy-hook.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ipc/aidl.iml" filepath="$PROJECT_DIR$/ipc/aidl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ipc/ipc.iml" filepath="$PROJECT_DIR$/ipc/ipc.iml" />
       <module fileurl="file://$PROJECT_DIR$/itemdecoration/itemdecoration.iml" filepath="$PROJECT_DIR$/itemdecoration/itemdecoration.iml" />
       <module fileurl="file://$PROJECT_DIR$/practicedraw2/practicedraw2.iml" filepath="$PROJECT_DIR$/practicedraw2/practicedraw2.iml" />
       <module fileurl="file://$PROJECT_DIR$/practicedraw3/practicedraw3.iml" filepath="$PROJECT_DIR$/practicedraw3/practicedraw3.iml" />
