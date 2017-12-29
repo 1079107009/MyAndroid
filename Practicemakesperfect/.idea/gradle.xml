@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/algorithm" />
+            <option value="$PROJECT_DIR$/ams-pms-hook" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/binder-hook" />
             <option value="$PROJECT_DIR$/dynamic-proxy-hook" />

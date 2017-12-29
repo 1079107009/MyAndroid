@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Practicemakesperfect.iml" filepath="$PROJECT_DIR$/Practicemakesperfect.iml" />
       <module fileurl="file://D:\MyAndroid\MyAndroid\Practicemakesperfect\ipc\aidl.iml" filepath="D:\MyAndroid\MyAndroid\Practicemakesperfect\ipc\aidl.iml" />
       <module fileurl="file://$PROJECT_DIR$/algorithm/algorithm.iml" filepath="$PROJECT_DIR$/algorithm/algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ams-pms-hook/ams-pms-hook.iml" filepath="$PROJECT_DIR$/ams-pms-hook/ams-pms-hook.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/binder-hook/binder-hook.iml" filepath="$PROJECT_DIR$/binder-hook/binder-hook.iml" />
       <module fileurl="file://$PROJECT_DIR$/dynamic-proxy-hook/dynamic-proxy-hook.iml" filepath="$PROJECT_DIR$/dynamic-proxy-hook/dynamic-proxy-hook.iml" />
