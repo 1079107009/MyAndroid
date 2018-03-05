@@ -17,23 +17,6 @@ public class Solution {
     }
 
     /**
-     * 617. Merge Two Binary Trees
-     */
-    public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
-        if (t1 == null) {
-            return t2;
-        }
-        if (t2 == null) {
-            return t1;
-        }
-
-        t1.val += t2.val;
-        t1.left = mergeTrees(t1.left, t2.left);
-        t1.right = mergeTrees(t1.right, t2.right);
-        return t1;
-    }
-
-    /**
      * 561. Array Partition I
      * Input: [1,4,3,2]
      * <p>
@@ -238,6 +221,21 @@ public class Solution {
         for (int i = 0; i < r * c; i++) {
             res[i / c][i % c] = nums[i / m][i % m];
         }
+        return res;
+    }
+
+    /**
+     * 771. Jewels and Stones
+     *
+     * @param J
+     * @param S
+     * @return
+     */
+    public int numJewelsInStones(String J, String S) {
+        int res = 0;
+        Set setJ = new HashSet();
+        for (char j : J.toCharArray()) setJ.add(j);
+        for (char s : S.toCharArray()) if (setJ.contains(s)) res++;
         return res;
     }
 }
