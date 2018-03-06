@@ -1,0 +1,6 @@
+
+Gsquid:S3010"+Remove this assignment of "mTitleFontSize".(ñÎ‰8°Ñ‹ƒ÷+
+Ksquid:S1066"/Merge this if statement with the enclosing one.(‹ĞÜù8¶ßı÷+
+bsquid:S2259"AA "NullPointerException" could be thrown; "tag" is nullable here.(¿ÎÛ¨şÿÿÿÿ8É¥ƒ÷+
+Psquid:S1066"/Merge this if statement with the enclosing one.(°â¹‘ùÿÿÿÿ8É¥ƒ÷+
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(·‡¶ñ8´È÷+

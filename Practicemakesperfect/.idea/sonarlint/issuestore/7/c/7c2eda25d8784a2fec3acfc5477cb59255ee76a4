@@ -1,0 +1,5 @@
+
+}squid:S1450"\Remove the "mRecyclerView" field and declare it as a local variable in the relevant methods.(Òéıÿÿÿÿ8‹šß÷+
+csquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(²Ú±
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ä„äŠ÷+
+c$squid:AssignmentInSubExpressionCheck".Extract the assignment out of this expression.(ƒÀÖü8ì”·¬÷+

@@ -1,0 +1,9 @@
+
+xsquid:S3008"WRename this field "INDEX_STRING" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ÜÍŸûÿÿÿÿ8 Ğ¨©÷+
+Tsquid:UselessParenthesesCheck"!Remove these useless parentheses.(„Àş¾ıÿÿÿÿ8ÿ–¦¬÷+
+"squid:ClassVariableVisibilityCheck"XMake INDEX_STRING a static final constant or non-public and provide accessors if needed.( ÜÍŸûÿÿÿÿ8 Ğ¨©÷+
+>squid:S2386"Make this member "protected".( ÜÍŸûÿÿÿÿ8 Ğ¨©÷+
+Ssquid:S1444"2Make this "public static INDEX_STRING" field final( ÜÍŸûÿÿÿÿ8 Ğ¨©÷+
+l
+squid:S128"LEnd this switch case with an unconditional break, return or throw statement.(âó´ÿÿÿÿÿ8“å‚¬÷+
+rsquid:S1450"VRemove the "mHeight" field and declare it as a local variable in the relevant methods.(šÏ£8ØÇãª÷+
