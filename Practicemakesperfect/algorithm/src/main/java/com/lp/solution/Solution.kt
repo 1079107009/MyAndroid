@@ -26,6 +26,71 @@ fun trimBST(root: TreeNode?, L: Int, R: Int): TreeNode? {
 }
 
 /**
+ * 前序遍历二叉树
+ */
+fun printPreoderTree(root: TreeNode?) {
+    if (root == null) {
+        return
+    }
+    print(root.value)
+    printPreoderTree(root.left)
+    printPreoderTree(root.right)
+}
+
+/**
+ * 中序遍历二叉树
+ */
+fun printInoderTree(root: TreeNode?) {
+    if (root == null) {
+        return
+    }
+    printInoderTree(root.left)
+    print(root.value)
+    printInoderTree(root.right)
+}
+
+/**
+ * 翻转二叉树
+ */
+fun reverseTree(root: TreeNode?): TreeNode? {
+    if (root == null) {
+        return null
+    }
+    val left = reverseTree(root.left)
+    val right = reverseTree(root.right)
+    root.left = right
+    root.right = left
+    return root
+}
+
+/**
+ * 铺平二叉树
+ */
+fun flattenTree(root: TreeNode?): TreeNode? {
+    if (root == null) {
+        return null
+    }
+    //先把左右子树铺平
+    val left = flattenTree(root.left)
+    val right = flattenTree(root.right)
+    //再把左右节点置空
+    root.left = null
+    root.right = null
+    //假如左子树生成的链表为空，那么忽略它，把右子树生成的链表指向根节点的右指针
+    if (left == null) {
+        root.right = right
+        return root
+    }
+    //如果左子树生成链表不为空，那么用while循环获取最后一个节点，并且它的右指针要指向右子树生成的链表的头节点
+    var lastLeft = left
+    while (lastLeft?.right != null) {
+        lastLeft = lastLeft.right
+    }
+    lastLeft?.right = right
+    return root
+}
+
+/**
  * 463. Island Perimeter
  */
 fun islandPerimeter(grid: Array<IntArray>): Int {

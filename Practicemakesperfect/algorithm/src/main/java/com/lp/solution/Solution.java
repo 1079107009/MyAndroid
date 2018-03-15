@@ -1,13 +1,40 @@
-
 package com.lp.solution;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Set;
 
 public class Solution {
+
+    /**
+     * 旋转字符串
+     * 给定一个字符串，要求把字符串前面的若干个字符移动到字符串的尾部，
+     * 如把字符串“abcdef”前面的2个字符'a'和'b'移动到字符串的尾部，使得原字符串变成字符串“cdefab”。
+     * 请写一个函数完成此功能，要求对长度为n的字符串操作的时间复杂度为 O(n)，空间复杂度为 O(1)。
+     */
+    private static String reverseString(String str, int from, int to) {
+        char[] array = str.toCharArray();
+        while (from < to) {
+            char c = array[from];
+            array[from++] = array[to];
+            array[to--] = c;
+        }
+        return new String(array);
+    }
+
+    public static void leftRotateString(String str, int m, int n) {
+        m %= n;
+        String s1 = reverseString(str, 0, m - 1);
+        String s2 = reverseString(s1, m, n - 1);
+        String s3 = reverseString(s2, 0, n - 1);
+    }
+
+    public static void main(String[] args) {
+        leftRotateString("abcdef", 3, 6);
+    }
 
     /**
      * 461. Hamming Distance
@@ -237,5 +264,23 @@ public class Solution {
         for (char j : J.toCharArray()) setJ.add(j);
         for (char s : S.toCharArray()) if (setJ.contains(s)) res++;
         return res;
+    }
+
+    private void printTree(TreeNode1 root) {
+        if (root == null) {
+            return;
+        }
+        Queue<TreeNode1> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode1 node = queue.poll();
+            System.out.println(node.val);
+            if (node.left != null) {
+                queue.add(node.left);
+            }
+            if (node.right != null) {
+                queue.add(node.right);
+            }
+        }
     }
 }
