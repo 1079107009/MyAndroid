@@ -33,7 +33,79 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        leftRotateString("abcdef", 3, 6);
+        int[] a = new int[]{2, 7, 4, 5, 10, 1, 9, 3, 8, 6};
+
+        quickSort(a, 0, a.length - 1);
+        binarySearch(a, 0, a.length - 1, 7);
+
+        System.out.println("排序后的结果：");
+        for (int x : a) {
+            System.out.print(x + " ");
+        }
+    }
+
+    private static int binarySearch(int[] a, int start, int end, int key) {
+        int result = -1;
+        if (start > end) {
+            return result;
+        }
+        int mid;
+        while (start <= end) {
+            mid = (start + end) / 2;
+            if (a[mid] < key) {
+                start = mid + 1;
+            } else if (a[mid] > key) {
+                end = mid - 1;
+            } else {
+                result = mid;
+                break;
+            }
+        }
+        return result;
+    }
+
+    private static void quickSort(int[] a, int start, int end) {
+        if (start > end) {
+            //元素为空的情况
+            return;
+        }
+        int partition = divide(a, start, end);
+        quickSort(a, start, partition - 1);
+        quickSort(a, partition + 1, end);
+    }
+
+    private static int divide(int[] a, int start, int end) {
+        //以最右边为基准
+        int base = a[end];
+        //当start等于end时结束循环
+        while (start < end) {
+            while (start < end && a[start] <= base) {
+                //从左边开始遍历，如果小于等于基准值就往右走
+                start++;
+            }
+            //上面的while循环结束时，就说明当前的a[start]的值比基准值大，应与基准值进行交换
+            if (start < end) {
+                int temp = a[start];
+                a[start] = a[end];
+                a[end] = temp;
+                //交换后，此时的那个被调换的值也同时调到了正确的位置(基准值右边)，因此右边也要同时向前移动一位
+                end--;
+            }
+            while (start < end && a[end] >= base) {
+                //从右边开始遍历，如果大于等于基准值就往左走
+                end--;
+            }
+            //上面的while循环结束时，就说明当前的a[end]的值比基准值小，应与基准值进行交换
+            if (start < end) {
+                int temp = a[start];
+                a[start] = a[end];
+                a[end] = temp;
+                //交换后，此时的那个被调换的值也同时调到了正确的位置(基准值左边)，因此左边也要同时向后移动一位
+                start++;
+            }
+        }
+        //返回start或者end都可以，因为他俩相等
+        return start;
     }
 
     /**
@@ -283,4 +355,6 @@ public class Solution {
             }
         }
     }
+
+
 }
