@@ -26,30 +26,6 @@ fun trimBST(root: TreeNode?, L: Int, R: Int): TreeNode? {
 }
 
 /**
- * 前序遍历二叉树
- */
-fun printPreoderTree(root: TreeNode?) {
-    if (root == null) {
-        return
-    }
-    print(root.value)
-    printPreoderTree(root.left)
-    printPreoderTree(root.right)
-}
-
-/**
- * 中序遍历二叉树
- */
-fun printInoderTree(root: TreeNode?) {
-    if (root == null) {
-        return
-    }
-    printInoderTree(root.left)
-    print(root.value)
-    printInoderTree(root.right)
-}
-
-/**
  * 翻转二叉树
  */
 fun reverseTree(root: TreeNode?): TreeNode? {

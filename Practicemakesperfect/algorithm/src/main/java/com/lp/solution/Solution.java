@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 import java.util.Set;
 
 public class Solution {
@@ -36,9 +35,10 @@ public class Solution {
         int[] a = new int[]{2, 7, 4, 5, 10, 1, 9, 3, 8, 6};
 
         quickSort(a, 0, a.length - 1);
-        binarySearch(a, 0, a.length - 1, 7);
+        int i = binarySearch(a, 0, a.length - 1, 7);
 
-        System.out.println("排序后的结果：");
+        System.out.println("排序后的结果：" + i
+        );
         for (int x : a) {
             System.out.print(x + " ");
         }
@@ -51,7 +51,7 @@ public class Solution {
         }
         int mid;
         while (start <= end) {
-            mid = (start + end) / 2;
+            mid = (start + end) >> 1;
             if (a[mid] < key) {
                 start = mid + 1;
             } else if (a[mid] > key) {
@@ -336,24 +336,6 @@ public class Solution {
         for (char j : J.toCharArray()) setJ.add(j);
         for (char s : S.toCharArray()) if (setJ.contains(s)) res++;
         return res;
-    }
-
-    private void printTree(TreeNode1 root) {
-        if (root == null) {
-            return;
-        }
-        Queue<TreeNode1> queue = new LinkedList<>();
-        queue.add(root);
-        while (!queue.isEmpty()) {
-            TreeNode1 node = queue.poll();
-            System.out.println(node.val);
-            if (node.left != null) {
-                queue.add(node.left);
-            }
-            if (node.right != null) {
-                queue.add(node.right);
-            }
-        }
     }
 
 
