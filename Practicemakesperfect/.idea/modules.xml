@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Practicemakesperfect.iml" filepath="$PROJECT_DIR$/Practicemakesperfect.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ipc/aidl.iml" filepath="$PROJECT_DIR$/ipc/aidl.iml" />
       <module fileurl="file://$PROJECT_DIR$/algorithm/algorithm.iml" filepath="$PROJECT_DIR$/algorithm/algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/ams-pms-hook/ams-pms-hook.iml" filepath="$PROJECT_DIR$/ams-pms-hook/ams-pms-hook.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
