@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * 树的遍历 前序遍历 中序遍历 后序遍历
+ * 树的遍历 前序遍历 中序遍历 后序遍历 层次遍历 最大深度 对称二叉树
  * F
  * /  \
  * B     G
@@ -22,7 +22,7 @@ import java.util.Queue;
  * @author someone
  * @date 2018/4/27
  */
-public class TreeTraversal {
+public class AboutTreeNode {
 
     /**
      * 递归前序遍历二叉树
@@ -137,6 +137,10 @@ public class TreeTraversal {
             return 0;
         }
         return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+    }
+
+    public static boolean isSymmetric(TreeNode root) {
+        return false;
     }
 
     public static void main(String[] args) {
